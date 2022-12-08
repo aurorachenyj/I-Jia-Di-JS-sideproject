@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.ico.ico"
+      type="image/x-icon"
+    />
+    <title>愛呷甜 | 所有甜甜資訊一次給你</title>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <script
+      src="https://kit.fontawesome.com/794bb4a436.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <input type="checkbox" name="" class="burCheck" id="menuControl" />
+      <nav>
+        <a href="./index.html"
+          ><img src="./assets/images/iJiadi-logo.PNG" alt="愛呷甜LOGO"
+        /></a>
+        <label for="menuControl" class="menuBtn">
+          <span>選單</span>
+        </label>
+        <ul>
+          <li><a href="./popular.html">熱門排行榜</a></li>
+          <li><a href="/collection.html">收藏匣</a></li>
+          <li><a href="./member.html">會員專區</a></li>
+          <li>
+            <a href="./searchPage.html"
+              >找甜甜 <i class="fa-solid fa-magnifying-glass fa-sm"></i
+            ></a>
+          </li>
+        </ul>
+
+        <button class="menuBarLoginBtn">
+          <a href="./login.html">登入<span> / 註冊</span></a>
+        </button>
+      </nav>
+    </header>
+
+    <div class="banner">
+      <div class="bannertext">
+        <h1 class="h1style">加入<span>愛呷甜會員 </span> 享受更多專屬功能</h1>
+        <!-- <p>
+          選擇想吃的甜點或是準備前往的捷運站 所有「甜甜」資訊一次秀出 立即探索！
+        </p> -->
+      </div>
+    </div>
+
+    <!-- 會員登入區塊 -->
+
+    <div class="login wrapstyle">
+      <h2>會員登入</h2>
+      <form class="loginArea">
+        <label for="loginAccount">email帳號* </label
+        ><span class="loginAccount"></span
+        ><input
+          id="loginAccount"
+          name="loginAccount"
+          class="inputStyle"
+          type="text"
+        />
+        <label for="loginPassword">密碼* </label
+        ><span class="loginPassword"></span
+        ><input
+          id="loginPassword"
+          name="loginPassword"
+          class="inputStyle"
+          type="password"
+        />
+        <div class="forgetAndLoginbtn">
+          <!-- <p class="small">忘記密碼</p> -->
+          <button class="btnStyle loginBtn">登入</button>
+        </div>
+        <p class="small">
+          *還不是會員？<span
+            ><a
+              style="text-decoration: none; color: black"
+              href="#signupcontent"
+              >立即註冊加入
+            </a></span
+          >
+        </p>
+      </form>
+    </div>
+
+    <!-- 會員註冊區塊 -->
+    <div class="signup wrapstyle">
+      <div class="title"><h2>會員註冊</h2></div>
+      <form id="signupcontent" class="signupcontent">
+        <div class="memberItem">
+          <label for="userName">用戶名稱* </label>
+          <span class="userName"></span>
+          <input id="userName" name="userName" class="inputStyle" type="text" />
+          <label for="email">email帳號* </label><span class="email"></span>
+          <input id="email" name="email" class="inputStyle" type="text" />
+          <!-- <label for="account">帳號 </label
+          ><input class="inputStyle" type="text" /> -->
+          <label for="password">密碼* </label>
+          <span class="password"></span>
+          <input
+            id="password"
+            name="password"
+            class="inputStyle"
+            type="password"
+          />
+          <!-- <label for="checkPassword">確認密碼 </label
+          ><input
+            id="checkPassword"
+            name="checkPassword"
+            class="inputStyle"
+            type="text"
+          /> -->
+        </div>
+      </form>
+      <button class="btnStyle signupBtn">立即註冊</button>
+    </div>
+
+    <!-- 其他 -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+    <script src="./assets/js/all.js"></script>
+    <script src="./assets/js/signup.js"></script>
+    <script src="./assets/js/login.js"></script>
+  </body>
+</html>

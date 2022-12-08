@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.ico.ico"
+      type="image/x-icon"
+    />
+    <title>愛呷甜 | 所有甜甜資訊一次給你</title>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <script
+      src="https://kit.fontawesome.com/794bb4a436.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      html:root {
+        --swiper-theme-color: #f7d800;
+        --swiper-navigation-size: 30px;
+        /* color: rgba(247, 194, 81, 0.973); */
+      }
+
+      .swiper {
+        width: 90%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin: 0 auto;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        /* margin: 0 auto; */
+      }
+
+      .swiper-slide img {
+        object-fit: cover;
+        display: block;
+        width: 300px;
+        height: 250px;
+        margin: 0 auto;
+      }
+
+      .decoration {
+        position: relative;
+        /* width: 10%; */
+        margin: 0 auto;
+      }
+
+      .decoration::after {
+        content: "1245";
+        font-size: 13px;
+        color: transparent;
+        /* width: 1rem;
+        height: 0.5rem; */
+        background-color: rgba(247, 216, 0, 0.5);
+        border-radius: 57% 43% 47% 53% / 40% 48% 52% 60%;
+        position: absolute;
+        bottom: 1px;
+        right: 46%;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <input type="checkbox" name="" class="burCheck" id="menuControl" />
+      <nav>
+        <a href="./index.html"
+          ><img src="./assets/images/iJiadi-logo.PNG" alt="愛呷甜LOGO"
+        /></a>
+        <label for="menuControl" class="menuBtn">
+          <span>選單</span>
+        </label>
+        <ul>
+          <li>
+            <a href="./popular.html">熱門排行榜</a>
+          </li>
+          <li><a href="./collection.html">收藏匣</a></li>
+          <li><a href="./member.html">會員專區</a></li>
+          <li>
+            <a class="menuBarSearch" href="./search-page.html"
+              >找甜甜 <i class="fa-solid fa-magnifying-glass fa-sm"></i
+            ></a>
+          </li>
+        </ul>
+        <button class="menuBarLoginBtn">
+          <a href="./login.html">登入<span> / 註冊</span></a>
+        </button>
+      </nav>
+    </header>
+    <div class="searchBar removeAbsolute">
+      <div class="dropdown">
+        <div class="item text">
+          <label class="default">請選擇甜點</label>
+        </div>
+
+        <div class="itemOption">
+          <div class="item">
+            <input id="sweetItem1" type="checkbox" value="肉桂捲" />
+            <span>肉桂捲</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem2" type="checkbox" value="巴斯克" />
+            <span>巴斯克</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem3" type="checkbox" value="生乳捲" />
+            <span>生乳捲</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem4" type="checkbox" value="可麗露" />
+            <span>可麗露</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem5" type="checkbox" value="千層" />
+            <span>千層</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem6" type="checkbox" value="戚風" />
+            <span>戚風</span>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem7" type="checkbox" value="乳酪蛋糕" />
+            <span>乳酪蛋糕</span>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem8" type="checkbox" value="布丁" />
+            <span>布丁</span>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem9" type="checkbox" value="鬆餅" />
+            <span>鬆餅</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem10" type="checkbox" value="泡芙" />
+            <span>泡芙</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem11" type="checkbox" value="水果塔" />
+            <span>水果塔</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem12" type="checkbox" value="檸檬塔" />
+            <span>檸檬塔</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem13" type="checkbox" value="鹹派" />
+            <span>鹹派</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem14" type="checkbox" value="司康" />
+            <span>司康</span>
+          </div>
+          <!--  -->
+          <div class="item">
+            <input id="sweetItem15" type="checkbox" value="磅蛋糕" />
+            <span>磅蛋糕</span>
+          </div>
+          <!--  -->
+          <div class="item">
+            <input id="sweetItem16" type="checkbox" value="甜甜圈" />
+            <span>甜甜圈</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem17" type="checkbox" value="舒芙蕾" />
+            <span>舒芙蕾</span>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem18" type="checkbox" value="布朗尼" />
+            <span>布朗尼</span>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem19" type="checkbox" value="瑪德蓮" />
+            <span>瑪德蓮</span>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem20" type="checkbox" value="提拉米蘇" />
+            <span>提拉米蘇</span>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem21" type="checkbox" value="冰品" />
+            <span>冰品</span>
+          </div>
+        </div>
+      </div>
+      <div class="mrtAndSearchArea">
+        <select class="mrt">
+          <option value="中山站">中山站</option>
+          <option value="雙連站">雙連站</option>
+          <option value="北門站">北門站</option>
+        </select>
+        <input class="searchShop" type="text" placeholder="  搜尋店家" />
+        <button class="searchBtn">搜尋</button>
+      </div>
+    </div>
+
+    <!-- <div class="popularWrap">
+      <h3 class="h3Style">熱門排行榜</h3>
+    </div> -->
+
+    <!-- 套件 -->
+
+    <h3 class="decoration" style="text-align: center">回訪意願最高</h3>
+    <div class="swiper mySwiper1">
+      <div class="swiper-wrapper returnList"></div>
+      <!-- <div class="swiper-pagination"></div> -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <h3 class="decoration" style="text-align: center">螞蟻人最愛</h3>
+    <div class="swiper mySwiper2">
+      <div class="swiper-wrapper sweetList"></div>
+      <!-- <div class="swiper-pagination"></div> -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <h3 class="decoration" style="text-align: center">CP值最高</h3>
+    <div class="swiper mySwiper3">
+      <div class="swiper-wrapper priceList"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- <div class="swiper-pagination"></div> -->
+    </div>
+
+    <!--  -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      let swiper1 = new Swiper(".mySwiper1", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        breakpoints: {
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+
+          789: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+      });
+
+      let swiper2 = new Swiper(".mySwiper2", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        breakpoints: {
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+
+          789: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+      });
+
+      let swiper3 = new Swiper(".mySwiper3", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        breakpoints: {
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+
+          789: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+
+    <script src="./assets/js/all.js"></script>
+    <script src="./assets/js/search.js"></script>
+    <script src="./assets/js/popular.js"></script>
+  </body>
+</html>

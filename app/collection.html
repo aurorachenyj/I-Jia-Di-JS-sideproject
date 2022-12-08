@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.ico.ico"
+      type="image/x-icon"
+    />
+    <title>愛呷甜 | 所有甜甜資訊一次給你</title>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <script
+      src="https://kit.fontawesome.com/794bb4a436.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <input type="checkbox" name="" class="burCheck" id="menuControl" />
+      <nav>
+        <a href="./index.html"
+          ><img src="./assets/images/iJiadi-logo.PNG" alt="愛呷甜LOGO"
+        /></a>
+        <label for="menuControl" class="menuBtn">
+          <span>選單</span>
+        </label>
+        <ul>
+          <li><a href="./popular.html">熱門排行榜</a></li>
+          <li><a href="./collection.html">收藏匣</a></li>
+          <li><a href="./member.html">會員專區</a></li>
+          <li>
+            <a class="menuBarSearch" href="./searchPage.html"
+              >找甜甜 <i class="fa-solid fa-magnifying-glass fa-sm"></i
+            ></a>
+          </li>
+        </ul>
+        <button class="menuBarLoginBtn">
+          <a href="./login.html">登入<span> / 註冊</span></a>
+        </button>
+      </nav>
+    </header>
+
+    <div class="collectionWrap">
+      <h3 class="h3Style">收藏匣</h3>
+
+      <div class="caseWrap">
+        <div class="caseItem">
+          <a href="./collection-detial.html"
+            ><img src="./assets/images/fake-case1.jpg" alt="" srcset="" />
+          </a>
+          <p>所有收藏店家</p>
+        </div>
+
+        <!-- <div class="caseItem">
+          <a href=""><img src="./pic/fakeCase2.jpg" alt="" srcset="" /> </a>
+          <p>會員自訂一</p>
+        </div>
+        <div class="caseItem">
+          <a href=""><img src="./pic/fakeCase3.jpg" alt="" srcset="" /> </a>
+          <p>會員自訂二</p>
+        </div>
+        <div class="caseItem">
+          <a href=""><img src="./pic/fakeCase4.jpg" alt="" srcset="" /> </a>
+          <p>會員自訂三</p>
+        </div> -->
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="./assets/js/all.js"></script>
+
+    <script src="./assets/js/collection.js"></script>
+  </body>
+</html>

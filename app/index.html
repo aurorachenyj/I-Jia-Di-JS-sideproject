@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.ico.ico"
+      type="image/x-icon"
+    />
+    <title>愛呷甜 | 所有甜甜資訊一次給你</title>
+    <link rel="stylesheet" href="./assets/style/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./assets/style/swiper.css " />
+
+    <link rel="stylesheet" href="./assets/style/style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/794bb4a436.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <script src="./search.js"></script> -->
+  </head>
+
+  <!-- 導覽列 -->
+  <!-- 控制漢堡選單的checkbox -->
+
+  <header>
+    <input type="checkbox" name="" class="burCheck" id="menuControl" />
+    <nav>
+      <a href="#"
+        ><img src="./assets/images/iJiadi-logo.PNG" alt="愛呷甜LOGO"
+      /></a>
+      <label for="menuControl" class="menuBtn">
+        <span>選單</span>
+      </label>
+      <ul>
+        <li><a href="./popular.html">熱門排行榜</a></li>
+        <li><a href="./collection.html">收藏匣</a></li>
+        <li><a href="./member.html">會員專區</a></li>
+        <li>
+          <a class="menuBarSearch" href="./search-page.html"
+            >找甜甜 <i class="fa-solid fa-magnifying-glass fa-sm"></i
+          ></a>
+        </li>
+      </ul>
+
+      <button class="menuBarLoginBtn">
+        <a href="./login.html">登入<span> / 註冊</span></a>
+      </button>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <div class="bannertext">
+      <h1 class="h1style">想吃甜點但不知要去哪？</h1>
+      <p class="bannerPStyle">
+        選擇想吃的甜點或是準備前往的捷運站 所有「甜甜」資訊一次秀出 立即探索！
+      </p>
+    </div>
+
+    <div class="searchBar">
+      <div class="dropdown">
+        <div class="item text">
+          <label class="default">請選擇甜點</label>
+        </div>
+        <!--  -->
+        <div class="itemOption">
+          <div class="item">
+            <input id="sweetItem1" type="checkbox" value="肉桂捲" />
+            <label for="sweetItem1">肉桂捲</label>
+            <!-- <span>肉桂捲</span> -->
+          </div>
+          <div class="item">
+            <input id="sweetItem2" type="checkbox" value="巴斯克" />
+            <label for="sweetItem2">巴斯克</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem3" type="checkbox" value="生乳捲" />
+            <label for="sweetItem3">生乳捲</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem4" type="checkbox" value="可麗露" />
+            <label for="sweetItem4">可麗露</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem5" type="checkbox" value="千層" />
+            <label for="sweetItem5">千層</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem6" type="checkbox" value="戚風" />
+            <label for="sweetItem6">戚風</label>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem7" type="checkbox" value="乳酪蛋糕" />
+            <label for="sweetItem7">乳酪蛋糕</label>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem8" type="checkbox" value="布丁" />
+            <label for="sweetItem8">布丁</label>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem9" type="checkbox" value="鬆餅" />
+            <label for="sweetItem9">鬆餅</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem10" type="checkbox" value="泡芙" />
+            <label for="sweetItem10">泡芙</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem11" type="checkbox" value="水果塔" />
+            <label for="sweetItem11">水果塔</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem12" type="checkbox" value="檸檬塔" />
+            <label for="sweetItem12">檸檬塔</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem13" type="checkbox" value="鹹派" />
+            <label for="sweetItem13">鹹派</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem14" type="checkbox" value="司康" />
+            <label for="sweetItem14">司康</label>
+          </div>
+          <!--  -->
+          <div class="item">
+            <input id="sweetItem15" type="checkbox" value="磅蛋糕" />
+            <label for="sweetItem15">磅蛋糕</label>
+          </div>
+          <!--  -->
+          <div class="item">
+            <input id="sweetItem16" type="checkbox" value="甜甜圈" />
+            <label for="sweetItem16">甜甜圈</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem17" type="checkbox" value="舒芙蕾" />
+            <label for="sweetItem17">舒芙蕾</label>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem18" type="checkbox" value="布朗尼" />
+            <label for="sweetItem18">布朗尼</label>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem19" type="checkbox" value="瑪德蓮" />
+            <label for="sweetItem19">瑪德蓮</label>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem20" type="checkbox" value="提拉米蘇" />
+            <label for="sweetItem20">提拉米蘇</label>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem21" type="checkbox" value="冰品" />
+            <label for="sweetItem21">冰品</label>
+          </div>
+
+          <p class="transparent">-----</p>
+        </div>
+        <!--  -->
+      </div>
+      <div class="mrtAndSearchArea">
+        <select class="mrt">
+          <option value="未選擇">選擇站點</option>
+          <option value="中山站">中山站</option>
+          <option value="雙連站">雙連站</option>
+          <option value="北門站">北門站</option>
+        </select>
+        <input class="searchShop" type="text" placeholder="  搜尋店家" />
+        <button class="searchBtn">搜尋</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 熱門店家推薦 輪播套件開始 -->
+
+  <div class="swiper mySwiper">
+    <h2 class="h2style">熱門店家推薦</h2>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="imgArea">
+          <a href="./shop.html?id=27">
+            <img src="./assets/images/shop-pic/dune.jpg" alt="" srcset=""
+          /></a>
+        </div>
+        <div class="shopText">
+          <h3 class="mb-1">沙丘<span>★</span></h3>
+
+          <p class="mb-1">台北市大同區延平北路二段62號5樓</p>
+          <p class="mb-1">營業時間：11:33–17:55 / 三四公休</p>
+          <a class="mb-1" href="./shop.html?id=27">more</a>
+          <div class="customerReview1">
+            <h4>真實評價</h4>
+
+            <p>
+              <span>Albee：</span>
+              布丁很好吃~提拉米蘇也很讚!!但店在5樓，去之前最好先預約，以免撲空
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgArea">
+          <a href="./shop.html?id=25">
+            <img src="./assets/images/shop-pic/wosom.jpg" alt="" srcset=""
+          /></a>
+        </div>
+        <div class="shopText">
+          <h3>沃森 WOSOM / ASW <span>★</span></h3>
+
+          <p>
+            台北市大同區迪化街一段34號2樓 <br />
+            11:00–19:00 / 週日公休
+          </p>
+          <a href="./shop.html?id=25">more</a>
+
+          <div class="customerReview1">
+            <h4>真實評價</h4>
+
+            <p>
+              <span>Aurora：</span>
+              店內環境很復古，午茶套餐的司康和抹醬可以選兩種口味，乳酪抹醬很讚~推推!!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgArea">
+          <a href="./shop.html?id=6">
+            <img src="./assets/images/shop-pic/douch.PNG" alt="" srcset=""
+          /></a>
+        </div>
+        <div class="shopText">
+          <h3>荷蘭小鬆餅南西中山店<span>★</span></h3>
+
+          <p>
+            台北市大同區南京西路64巷9弄19號<br />
+            營業時間：10:30–21:30
+          </p>
+          <a href="./shop.html?id=6">more</a>
+          <div class="customerReview1">
+            <h4>真實評價</h4>
+
+            <p>
+              <span>Ruby：</span>
+              迷你的小鬆餅超可愛也很好吃，鹹食也很優秀~ 已回訪2次以上!!
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div> -->
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- 熱門店家推薦 輪播套件結束 -->
+
+  <!-- 熱門店家推薦 舊寫法  -->
+
+  <!-- <div class="popularShop">
+    <h2 class="h2style">熱門店家推薦</h2>
+    <div class="shopContent">
+      <div class="shopimgWrap">
+        <img class="imgStyle" src="./pic/store.png" alt="店家照片" />
+      </div>
+
+      <div class="shopitem">
+        <h3>鐵木Ironwood 台北店 <span>4.5 ★</span></h3>
+        <div class="tag">
+          <button class="tagButton">外觀美</button>
+          <button class="tagButton">品項選擇多</button>
+          <button class="tagButton">回訪意願高</button>
+        </div>
+        <p>
+          台北市大同區南京西路64巷16-2號2樓 <br />
+          營業時間：12:00 - 19:00
+        </p>
+        <a href="">more</a>
+        <div class="customerReview">
+          <h4>真實評價</h4>
+
+          <p>
+            <span>會員A：</span>
+            從台中開上來台北的鐵木，水果蛋糕每個都很好吃，最推薦綠葡萄抹茶蛋糕
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="customerReviewForTM">
+      <h4>真實評價</h4>
+
+      <p>
+        <span>會員A：</span>
+        從台中開上來台北的鐵木，水果蛋糕每個都很好吃，最推薦綠葡萄抹茶蛋糕
+      </p>
+    </div>
+  </div> -->
+
+  <!-- about -->
+
+  <div class="about">
+    <div class="aboutArea">
+      <h2 class="h2style">About 愛呷甜</h2>
+      <div class="aboutWrap">
+        <div class="aboutItem">
+          <img src="./assets/images/shop-property.png" alt="評價圖示" />
+          <p>輕鬆獲得甜點店家資訊和最真實的饕客評價</p>
+        </div>
+        <div class="aboutItem">
+          <img src="./assets/images/heart-property.png" alt="收藏圖示" />
+          <p>一鍵收藏喜愛的店家 創造出屬於自己的口袋名單</p>
+        </div>
+        <div class="aboutItem">
+          <img src="./assets/images/case-property.png" alt="收藏匣圖示" />
+          <p>高彈性的收藏匣分類 一切由你做主</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <a href="#"
+      ><img src="./assets/images/iJiadi-logo.PNG" alt="愛呷甜LOGO"
+    /></a>
+    <p>此網站僅作為個人 side project 無任何營利行為或商業用途</p>
+  </footer>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/swiper.js"></script>
+    <script src="./assets/js/all.js"></script>
+    <script src="./assets/js/search.js"></script>
+  </body>
+</html>

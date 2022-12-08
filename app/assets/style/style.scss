@@ -1,0 +1,1397 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  position: relative;
+}
+
+body {
+  position: relative;
+}
+
+//熱門店家的圖片設定
+.imgStyle {
+  // max-width: 100%;
+  // max-height: 100%;
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+//文字大小設定
+
+.h2style {
+  padding: 1.5rem 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+// h2前面的小裝飾
+.h2style::before {
+  content: "1";
+  color: transparent;
+  background-color: #ffb330;
+  border-radius: 8px 0 8px 0;
+  margin-right: 1rem;
+}
+
+// @keyframes navbar {
+//   50% {
+//     border-bottom: 3px solid #ffb330;
+//     transform: scale(0.5);
+//   }
+//   100% {
+//     transform: scale(1);
+//     transform: translateY(20px);
+//   }
+// }
+
+//導覽列
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  width: 100%;
+
+  background-color: white;
+
+  //漢堡checkbox
+  .burCheck {
+    display: none;
+  }
+  nav {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+    align-items: center;
+    .menuBtn {
+      display: none;
+    }
+    //
+    ul {
+      display: flex;
+
+      li {
+        padding: 0 1rem;
+        &:hover {
+          transform: translateY(-3px);
+        }
+
+        a {
+          text-decoration: none;
+          color: #1e1e1e;
+          &:hover {
+            padding-bottom: 0.3rem;
+            border-bottom: 3px solid #fcbb4c;
+            transform: translateY(5px);
+
+            // transition: all 0.2s ease;
+          }
+        }
+      }
+    }
+    button {
+      a {
+        text-decoration: none;
+        color: #1e1e1e;
+      }
+      border: none;
+      padding: 0.3rem 0.5rem;
+      background: linear-gradient(115deg, #ffb330, #fffcce);
+      border-radius: 30px;
+    }
+  }
+}
+
+//導覽列結束
+
+//banner 搜尋區
+.banner {
+  // margin-top: 5rem;
+  width: 100%;
+  height: 60vh;
+  background-image: url(../images/banner.png);
+  background-position: top center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .bannertext {
+    max-width: 80vw;
+    text-align: center;
+    color: white;
+
+    margin: 0 auto;
+    background-color: rgba(255, 179, 48, 0.7);
+    padding: 1rem;
+    p {
+      margin-top: 0.3rem;
+    }
+  }
+}
+.searchBar {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: -1rem;
+  display: flex;
+  justify-content: flex-start;
+
+  border: 3px solid;
+  border-color: #fdcf80 #fab337 #eea526 #faca78;
+  border-radius: 20px;
+  .dropdown {
+    display: inline-block;
+    max-width: 12rem;
+    height: 2rem;
+    // z-index: 2;
+    margin-right: 0.5rem;
+    &:hover .itemOption {
+      display: block;
+      z-index: 10;
+    }
+    .item {
+      display: inline-block;
+      width: 18rem;
+      height: 2rem;
+      border-radius: 20px 0 0 20px;
+      border: none;
+      padding: 0 0.5rem;
+      background: #fff;
+    }
+
+    .itemOption {
+      z-index: 10;
+      display: none;
+      width: 12.5rem;
+      height: 8.5rem;
+      overflow-y: auto;
+      overflow-x: hidden;
+      &::-webkit-scrollbar-track {
+        background-color: #f5f0db;
+      }
+      &::-webkit-scrollbar {
+        width: 8px;
+        background-color: rgb(218, 214, 214);
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #fcde58;
+        border-radius: 10px;
+      }
+    }
+
+    .text {
+      border-radius: 30px;
+      font-size: 14px;
+    }
+
+    .text,
+    .item span,
+    .item input[type="checkbox"] {
+      line-height: 2rem;
+    }
+
+    .text .default {
+      color: #7e7e7e;
+    }
+  }
+  .mrtAndSearchArea {
+    border-radius: 0 50px 50px 0;
+    .mrt,
+    .searchBtn,
+    .searchShop {
+      border-left: 2px solid rgb(182, 180, 180);
+      outline: none;
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+      padding: 0.1rem 0.2rem;
+    }
+
+    .searchBtn {
+      &:hover {
+        // background: linear-gradient(115deg, #fcab1f, #fdf7a7);
+        background: linear-gradient(115deg, #d88c0a, #fdf7a7);
+      }
+      outline: none;
+      border: none;
+      padding: 0.5rem;
+      background: linear-gradient(115deg, #ffb330, #fffcce);
+      border-radius: 0 50px 50px 0;
+      cursor: pointer;
+    }
+  }
+}
+
+.transparent {
+  color: transparent;
+}
+
+// tag 和 H3 、 keyWordTag 公用設定區 ▼
+.mr-2 {
+  margin-right: 2rem;
+}
+
+.h1style {
+  font-size: 1.8rem;
+}
+.bannerPStyle {
+  font-size: 1rem;
+}
+
+h3,
+.tag,
+p {
+  padding: 0.3rem 0;
+}
+.tagButton {
+  background-color: #fffcce;
+  color: #e19717;
+  border: none;
+  padding: 0.2rem 0.35rem;
+  border-radius: 30px;
+  margin: 0 0.3rem 0 0;
+}
+
+.star {
+  color: #ffb330;
+}
+
+.keyWordTagStyle {
+  text-decoration: none;
+  color: #7e7e7e;
+  padding: 0 0.2rem;
+
+  &:hover {
+    color: #e19717;
+  }
+}
+
+.readMoreBtn {
+  border: none;
+  padding: 0.3rem 0.5rem;
+  background-color: #e19717;
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0.2rem;
+  right: 1rem;
+  &:hover {
+    background-color: #cc8407;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.sortStyle {
+  border: 0.15rem solid #e19717;
+  border-radius: 10px;
+}
+
+.buttonOutlineStyle {
+  background-color: white;
+  border: 0.15rem solid #fad78b;
+  padding: 0.3rem 0.2rem;
+  border-radius: 10px;
+  margin: 0.3rem;
+}
+
+// 全網公用設定區 ▲
+
+//熱門店家推薦
+
+// .popularShop {
+//   //評價區一下就破版 特別做給其他尺寸的
+//   .customerReviewForTM {
+//     display: none;
+//   }
+
+//   //
+//   padding: 6rem 0 5rem 0;
+//   width: 70vw;
+//   margin: 0 auto;
+
+//   .shopContent {
+//     display: flex;
+//     flex-grow: 1.5 1;
+
+//     .shopimgWrap {
+//       max-width: 450px;
+//       max-height: 300px;
+//       margin-right: 2rem;
+//     }
+
+//     .shopitem {
+//       // margin-left: 2rem;
+//       h3 {
+//         span {
+//           color: #ffb330;
+//           margin-left: 0.3rem;
+//         }
+//       }
+
+//       a {
+//         color: #e19717;
+//       }
+//       .customerReview {
+//         margin-top: 1.5rem;
+//         width: 25vw;
+//         border: 1px solid gray;
+//         border-radius: 20px;
+//         padding: 0.5rem;
+//         h4 {
+//           text-align: center;
+//           color: #7e7e7e;
+//         }
+//         p {
+//           color: #7e7e7e;
+//           span {
+//             color: #cf9b42;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+//about
+
+.about {
+  background: linear-gradient(115deg, #fffdea, #fffef3);
+  padding: 2rem 0;
+  .aboutArea {
+    width: 70vw;
+    margin: 0 auto;
+
+    .aboutWrap {
+      // padding: 0 0 2rem 0;
+
+      display: flex;
+      justify-content: space-around;
+      .aboutItem {
+        width: 20vw;
+        img {
+          max-width: 48px;
+          max-height: 48px;
+          background-color: white;
+          padding: 0.5rem;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  p {
+    color: #b4b3b3;
+  }
+}
+
+//第二頁 會員登入/註冊頁
+
+// 會員登入區
+
+// 共用設定區▼
+.wrapstyle {
+  text-align: center;
+  width: 40vw;
+  border: 3px solid #f0ebba;
+  border-radius: 30px;
+  padding: 1rem;
+  margin: 2rem auto;
+}
+
+.inputStyle {
+  background-color: #fffcce;
+  border-radius: 50px;
+  margin: 1rem 0;
+  border: 1px solid transparent;
+  border-bottom: 0.1rem solid #cf9b42;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.btnStyle {
+  margin-top: 1rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(115deg, #ffb330, #fffcce);
+  border-radius: 30px;
+  cursor: pointer;
+  &:hover {
+    background: #fab132;
+  }
+}
+
+// button {
+//
+// }
+
+// 共用設定區▲
+
+.login {
+  .loginArea {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    span {
+      color: red;
+      font-size: 14px;
+      text-align: right;
+    }
+
+    .forgetAndLoginbtn {
+      margin: 0.5rem;
+      display: flex;
+      justify-content: center;
+    }
+    .small {
+      margin-top: 1.5rem;
+      span {
+        background-color: #fadcce;
+        &:hover {
+          cursor: pointer;
+          background-color: #f7cab5;
+        }
+      }
+    }
+  }
+}
+
+// 會員註冊區
+
+.signup {
+  .title {
+    margin-bottom: 1rem;
+  }
+  .signupcontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    // .upLoadPic {
+    //   // margin-right: 2rem;
+    //   .signupImg {
+    //     max-width: 10vw;
+    //   }
+    // }
+
+    .memberItem {
+      // background-color: yellow;
+      width: 40vw;
+      padding: 0.5rem;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        color: red;
+        font-size: 14px;
+        text-align: right;
+      }
+    }
+  }
+}
+
+// 第三頁 會員專區
+
+.memberPageWrapStyle {
+  width: 70vw;
+  background-color: white;
+  border: 3px solid #f0ebba;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  margin: 2rem auto 0.5rem;
+}
+
+.flex {
+  background: linear-gradient(115deg, #fffef3, #fffcce);
+  display: flex;
+  flex-direction: column;
+  .memberwrap {
+    text-align: center;
+    .memberEditArea {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .upLoadPic {
+        margin-right: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+        }
+        input {
+          width: 70%;
+          align-items: right;
+        }
+      }
+
+      .memberEditItem {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+    }
+  }
+  // 我所發表的評價區
+  .reviewWrap {
+    h2 {
+      text-align: center;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+      border-bottom: 0.2rem solid rgb(211, 210, 210);
+      padding-bottom: 1rem;
+      .picWrap {
+        max-width: 20vw;
+        margin-right: 2rem;
+        img {
+          width: 100%;
+        }
+      }
+      p {
+        background-color: #f8f7ea;
+        padding: 0.5rem;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+//第四頁 搜尋結果頁面
+
+// 小的搜尋列樣式和架構待補 還有地圖
+//下面是暫時的設定
+
+.searchMap {
+  width: 50vw;
+  // margin: 0 auto;
+  img {
+    width: 100%;
+  }
+}
+//上面是暫時的設定
+
+//搜尋欄其他設定
+.removeAbsolute {
+  width: fit-content;
+  position: static;
+  margin: 0 auto 4rem;
+  // z-index: 10;
+}
+
+//變更排序dropdown區
+.searchResultSort {
+  width: 80vw;
+  margin: 0 auto 1rem;
+  display: flex;
+  justify-content: flex-end;
+
+  p {
+    padding: 0 0.5rem 0 1rem;
+  }
+}
+
+// 搜尋店家列表區
+// .searchWrap {
+//   display: flex;
+//   margin: 0.3rem;
+// }
+
+.searchResultList {
+  margin: 0 auto;
+  width: 80vw;
+  height: 70vh;
+  overflow-y: auto;
+  &::-webkit-scrollbar-track {
+    color: yellow;
+  }
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: #f8deb2;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #fcbb4c;
+    border-radius: 20px;
+  }
+
+  .searchResultItem {
+    border-bottom: 0.2rem solid rgb(201, 194, 194);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    .searchResultImgWrap {
+      width: 14rem;
+    }
+
+    .shopItem {
+      width: 70vw;
+      position: relative;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      h4 span {
+        color: #ffb330;
+      }
+
+      // .keyWordTag {
+      // }
+
+      .saveState {
+        max-width: 2rem;
+        position: absolute;
+        top: 0.5rem;
+        right: 2rem;
+        // img {
+        //   width: 100%;
+        // }
+      }
+
+      // .readMoreBtn {
+      //   border: none;
+      //   padding: 0.3rem 0.5rem;
+      //   background-color: #e19717;
+      //   color: white;
+      //   border-radius: 5px;
+      //   position: absolute;
+      //   bottom: 0.2rem;
+      //   right: 0rem;
+      //   &:hover {
+      //     background-color: #cc8407;
+      //   }
+      //   a {
+      //     text-decoration: none;
+      //     color: white;
+      //   }
+      // }
+    }
+  }
+}
+
+// 第五頁 店家詳細資訊頁面
+
+.h4Style {
+  text-align: center;
+  width: 30vw;
+}
+
+.shopInfoOutWrap {
+  padding: 2rem;
+
+  .shopInfoWrap {
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    // .shopInfo {
+    // }
+    .btnAndMap {
+      text-align: right;
+
+      .searchMap {
+        width: 30vw;
+      }
+    }
+  }
+
+  .shopImgArea {
+    max-width: 70vw;
+
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 20vw;
+      margin: 0 2rem;
+    }
+  }
+  .keyWordTag {
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+}
+
+//撰寫評價區
+//共用設定 ▼
+.gray {
+  color: #7e7e7e;
+  font-size: 14px;
+  display: block;
+  text-align: right;
+  margin: 0.5rem 0;
+}
+
+.scoreLabel {
+  color: #f3a318;
+}
+
+.wrapStyle {
+  width: 70vw;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h3Style {
+  text-align: left;
+  width: 70vw;
+  display: inline-block;
+
+  &::before {
+    content: "1";
+    background-color: #f3a318;
+    color: transparent;
+    border-radius: 20px 0 20px 0;
+    margin-right: 0.3rem;
+  }
+}
+//共用設定 ▲
+
+.addReview {
+  padding: 1rem 0;
+  background: linear-gradient(115deg, #fffef3, white);
+  text-align: center;
+
+  .reviewWrap {
+    .member {
+      width: 20%;
+
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      p {
+        text-align: center;
+      }
+    }
+
+    .reviewContent {
+      width: 25vw;
+
+      .reviewOption {
+        // display: flex;
+        // justify-content: space-between;
+        margin: 1rem 0;
+        .wrap {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 30vw;
+          background-color: #fffcd7;
+          margin: 0.5rem 0;
+          padding: 0.2rem 1rem;
+          border-radius: 30px;
+
+          .star {
+            color: rgb(173, 171, 171);
+            &:hover {
+              color: rgb(241, 241, 19);
+            }
+          }
+          .click {
+            color: rgb(240, 186, 9);
+          }
+          .mouseover {
+            color: rgb(241, 241, 19);
+          }
+        }
+      }
+
+      .reviewArea {
+        width: 30vw;
+        height: 6vw;
+        margin: 1rem 0;
+        resize: none;
+        outline-color: #e19717;
+        border: 0.15rem solid rgb(124, 116, 116);
+      }
+    }
+
+    .postPic {
+      .uploadShopPic {
+        background-color: rgb(255, 255, 219);
+        width: 70%;
+      }
+
+      .SendReviewBtn {
+        margin-top: 1.5rem;
+        border: none;
+        border-radius: 20px;
+        padding: 0.5rem 2rem;
+        background: linear-gradient(-35deg, #ffb330, #fffef3);
+        &:hover {
+          background: #f3a318;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// 其他人對此店的評價
+.otherReview {
+  text-align: center;
+  padding: 1rem 0;
+  h3 {
+    span {
+      color: #7e7e7e;
+    }
+  }
+  .otherReviewWrap {
+    padding-bottom: 1rem;
+    border-bottom: 0.15rem dashed rgb(179, 174, 174);
+
+    .otherMember {
+      width: 15%;
+
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+    }
+    .otherReviewContent {
+      width: 70vw;
+
+      text-align: left;
+      padding: 0 2rem;
+      p {
+        margin-bottom: 1rem;
+      }
+
+      // .tagArea {
+      // }
+    }
+    img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+}
+
+//第六頁 收藏匣
+
+.collectionWrap {
+  position: relative;
+  width: 70vw;
+  // background-color: #7e7e7e;
+  margin: 0 auto;
+
+  .caseWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .caseItem {
+      margin: 1rem;
+      max-width: 30vw;
+      position: relative;
+      // height: 30vw;
+      // background-color: yellow;
+      img {
+        width: 100%;
+        border-radius: 43% 57% 31% 69% / 63% 34% 66% 37%;
+        border-top: 0.5px solid #e19717;
+        border-bottom: 3px solid #e7ad4a;
+        border-left: 1px solid #e7ad4a;
+        border-right: 2px solid #e19717;
+        padding: 1rem 1.2rem 1.5rem 0.8rem;
+        // clip-path: ellipse(50% 77% at 50% 77%);
+
+        &:hover {
+          transform: rotate(-15deg);
+          transition: 0.5s;
+          border-top: 0.5px solid #e2be81;
+          border-bottom: 4px solid #be831c;
+          border-left: 1px solid #ce9533;
+          border-right: 2px solid #c0a577;
+          padding: 0.5rem 0.6rem 0.75rem 0.4rem;
+        }
+      }
+      p {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+//第七頁 收藏匣內頁
+
+.collectionShopList {
+  width: 70vw;
+  margin: 0 auto;
+  // background-color: yellow;
+
+  .sortArea {
+    // background-color: #7e7e7e;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0 1rem 0;
+  }
+
+  .ShopListWrap {
+    padding: 1rem 0;
+    .shoplistItem {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+      padding-bottom: 1rem;
+      border-bottom: 0.15rem dotted gray;
+      a {
+        display: block;
+        // width: 10%;
+        img {
+          width: 20vw;
+        }
+      }
+
+      .shopItem {
+        margin-left: 1.5rem;
+        span {
+          color: #ffb330;
+          margin-left: 0.3rem;
+        }
+        .readMoreBtn {
+          bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+//熱門排行榜
+.popularWrap {
+  width: 80vw;
+  margin: 0 auto;
+
+  .popularList {
+    text-align: center;
+    .popularItemWrap {
+      margin: 1rem auto;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-around;
+
+      .popularItem {
+        a {
+          img {
+            max-width: 25vw;
+          }
+        }
+        // p {
+        // }
+      }
+    }
+  }
+}
+
+//---------------------------------//
+//這裡開始是RWD設定 ▼
+
+@media (max-width: 1067px) {
+  //熱門店家推薦區
+  // .popularShop {
+  //   width: 75vw;
+  //   .customerReviewForTM {
+  //     display: block;
+  //     margin-top: 1.5rem;
+  //     width: 70vw;
+  //     border: 1px solid gray;
+  //     border-radius: 20px;
+  //     padding: 0.5rem;
+  //     h4 {
+  //       text-align: center;
+  //       color: #7e7e7e;
+  //     }
+  //     p {
+  //       color: #7e7e7e;
+  //       span {
+  //         color: #cf9b42;
+  //       }
+  //     }
+  //   }
+  // }
+
+  // .customerReview {
+  //   display: none;
+  // }
+  //
+  .about {
+    .aboutArea {
+      width: 75vw;
+    }
+  }
+
+  .searchResultList {
+    .searchResultItem {
+      .shopItem {
+        width: 100%;
+
+        .saveState {
+          max-width: 1.5rem;
+          top: 1rem;
+        }
+        .readMoreBtn {
+          padding: 0.3rem 0.4rem;
+          // margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+  .h3Style,
+  .wrapStyle {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 695px) {
+  //導覽列改成漢堡選單 搜尋區改手機板樣式
+
+  header {
+    .burCheck {
+      position: absolute;
+      opacity: 0;
+    }
+    nav {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      //moTab
+      .menuBtn {
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        right: 0.5rem;
+        span {
+          opacity: 0;
+        }
+        //漢堡圖示
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0.5rem;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          width: 2rem;
+          height: 0.2rem;
+          background-color: #ffb330;
+          box-shadow: 0px 0.6rem 0px #ffb330, 0px -0.6rem 0px #ffb330;
+          border-radius: 20px;
+        }
+      }
+
+      ul {
+        //先讓他隱藏等選到之後再秀出來
+        display: none;
+        flex-direction: column-reverse;
+        position: absolute;
+        right: -100%;
+        top: 3.6rem;
+        z-index: 30;
+        background-color: rgba(250, 250, 245, 0.856);
+        transition: 0.5s;
+        li {
+          padding: 1rem;
+          // border-bottom: 0.1rem solid #fcbb4c;
+        }
+      }
+
+      button {
+        position: absolute;
+        left: 1rem;
+      }
+    }
+    //點下漢堡後秀出ul的內容
+    .burCheck:checked ~ nav ul {
+      display: flex;
+      right: 0rem;
+    }
+  }
+  .banner {
+    height: 50vh;
+  }
+  .searchBar {
+    bottom: -3rem;
+
+    flex-direction: column;
+    padding: 0.5rem;
+    .dropdown {
+      z-index: 5;
+
+      .text {
+        border-radius: 30px;
+        background-color: #f8f2f2;
+      }
+    }
+    .mrtAndSearchArea {
+      margin-top: 0.5rem;
+
+      .searchBtn {
+        border-radius: 20px;
+      }
+    }
+  }
+
+  //下面都調好了 不用動
+  .shopContent {
+    display: flex;
+    flex-direction: column;
+    .shopitem {
+      margin: 0;
+    }
+  }
+  .about {
+    .aboutArea {
+      .aboutWrap {
+        display: flex;
+        flex-direction: column;
+        .aboutItem {
+          width: fit-content;
+          display: flex;
+          align-items: center;
+          margin: 0.5rem 0;
+          p {
+            margin-left: 0.3rem;
+          }
+        }
+      }
+    }
+  }
+  //上面不要動
+
+  .noShow {
+    display: none;
+  }
+
+  //會員登入註冊區
+
+  .wrapstyle {
+    width: 70vw;
+  }
+  .signup {
+    .signupcontent {
+      .memberItem {
+        // background-color: pink;
+        width: 70vw;
+      }
+    }
+  }
+
+  // 收藏匣
+  .collectionShopList {
+    width: 90vw;
+  }
+
+  //會員專區
+
+  .flex {
+    .memberwrap {
+      .memberEditArea {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        .upLoadPic {
+          margin-right: 0rem;
+        }
+      }
+    }
+
+    .reviewWrap {
+      .item {
+        flex-direction: column-reverse;
+
+        .picWrap {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+  // .searchWrap
+  //   display: flex;
+  //   flex-direction: column;
+  //   width: 100%;
+
+  .searchMap {
+    width: 100%;
+  }
+
+  .searchResultList {
+    width: 100%;
+    .searchResultItem {
+      flex-direction: column;
+
+      // padding: 1rem 0.5rem;
+
+      .searchResultImgWrap {
+        width: 40vw;
+        img {
+          width: 100%;
+        }
+      }
+      .shopItem {
+        .saveState {
+          right: 0rem;
+        }
+        .readMoreBtn {
+          right: 0rem;
+        }
+      }
+    }
+  }
+
+  .shopInfoOutWrap {
+    display: flex;
+    flex-direction: column;
+    .shopInfoWrap {
+      width: 90vw;
+      display: flex;
+      flex-direction: column;
+
+      .btnAndMap {
+        text-align: left;
+      }
+    }
+    .shopImgArea {
+      // background-color: yellow;
+      width: 40vw;
+      margin: 1rem auto;
+      img {
+        width: 100%;
+        margin: 0 0.5rem;
+      }
+    }
+  }
+
+  .h3Style,
+  .wrapStyle {
+    width: 90vw;
+  }
+
+  .h4Style {
+    width: 70vw;
+  }
+
+  .wrapStyle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .addReview {
+    .reviewWrap {
+      .member {
+        width: 30%;
+      }
+
+      .reviewContent {
+        width: 75vw;
+        .reviewOption {
+          justify-content: space-evenly;
+          .wrap {
+            width: 70vw;
+            margin: 0.5rem auto;
+          }
+        }
+
+        .reviewArea {
+          width: 70vw;
+          height: 8vw;
+        }
+      }
+    }
+  }
+  .otherReview {
+    .otherReviewWrap {
+      .otherMember {
+        width: 30%;
+      }
+
+      .otherReviewContent {
+        width: 80vw;
+        padding: 0 1rem;
+        .tagArea {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  //banner的字體用小一點
+
+  header {
+    nav {
+      .menuBtn {
+        //漢堡圖示
+        &::before {
+          content: "";
+          left: 1rem;
+          width: 1.5rem;
+          box-shadow: 0px 0.5rem 0px #ffb330, 0px -0.5rem 0px #ffb330;
+        }
+      }
+    }
+
+    button {
+      a {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .searchBar {
+    .mrtAndSearchArea {
+      // margin-top: 0.5rem;
+      // background-color: yellow;
+      // .searchShop {
+      //
+      // }
+      .searchBtn {
+        border-radius: 20px;
+        padding: 0.3rem;
+      }
+    }
+  }
+
+  .wrapstyle {
+    width: 80vw;
+  }
+
+  .signup {
+    .signupcontent {
+      flex-direction: column-reverse;
+    }
+  }
+}

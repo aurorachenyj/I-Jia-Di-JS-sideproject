@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  padding: 0.5rem;
+}
+
+nav {
+  background-color: burlywood;
+  width: 100%;
+  height: 7vh;
+  margin-bottom: 5rem;
+}
+
+.mangerlogin {
+  margin: auto;
+  background-color: rgb(250, 250, 202);
+  padding: 1rem 2rem 4rem 2rem;
+  width: fit-content;
+  position: relative;
+}
+.loginbtn {
+  position: absolute;
+  bottom: 1rem;
+  left: 40%;
+}
+
+input {
+  margin: 0.5rem 0;
+}
+
+/* 管理員登入後首頁 */
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header p {
+  padding: 1rem;
+}
+
+h1,
+.header span {
+  color: rgb(255, 255, 255);
+}
+
+.adminLogoutBtn {
+  margin-left: 0.5rem;
+  padding: 0.2rem;
+  border: 1px solid rgb(128, 31, 31);
+  border-radius: 10px;
+  background-color: rgb(153, 127, 9);
+  color: white;
+}
+
+.adminLogoutBtn:hover {
+  cursor: pointer;
+  background-color: rgb(53, 6, 6);
+}
+
+.chooseBtn {
+  text-align: center;
+}
+.chooseBtn button {
+  padding: 0.3rem 0.5rem;
+  margin: 0 2rem;
+  background-color: white;
+}
+
+.chooseBtn button:hover {
+  background-color: rgb(153, 127, 9);
+  color: wheat;
+  cursor: pointer;
+}
+
+.chooseBtn button a {
+  text-decoration: none;
+}
+
+.showData {
+  width: 90%;
+
+  background-color: rgb(153, 127, 9);
+  margin: 2rem auto;
+}
+
+.showData tr {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(255, 248, 226);
+  padding: 0.5rem 0;
+  margin: 1px 0;
+}
+
+.showData td {
+  /* background-color: pink; */
+  /* border: 2px solid gray; */
+  text-align: center;
+}
+
+.chartArea {
+  display: flex;
+  justify-content: space-around;
+}

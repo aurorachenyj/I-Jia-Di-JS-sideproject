@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>愛呷甜後台管理系統</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav><h1>愛呷甜後台</h1></nav>
+
+    <div class="mangerlogin">
+      <h2>管理員登入</h2>
+
+      <p>帳號</p>
+      <input id="adminAccount" type="text" /> <br />
+      <p>密碼</p>
+      <input id="adminPassword" type="text" /> <br />
+
+      <button class="loginbtn">登入</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script>
+      const jsonUrl = "http://localhost:3000";
+      const adminAccount = document.querySelector("#adminAccount");
+      const adminPassword = document.querySelector("#adminPassword");
+      const loginbtn = document.querySelector(".loginbtn");
+
+      loginbtn.addEventListener("click", checkAdmin);
+
+      function checkAdmin(e) {
+        console.log(adminAccount.value);
+        console.log(adminPassword.value);
+
+        let data = {
+          email: adminAccount.value.trim(),
+          password: adminPassword.value.trim(),
+        };
+
+        axios
+          .post(`${jsonUrl}/login`, data)
+          .then((res) => {
+            console.log(res);
+            console.log(res.data);
+            console.log(res.data.user.role);
+            console.log(res.data.user.userName);
+
+            if (res.data.user.role === "admin") {
+              localStorage.setItem("adminName", res.data.user.userName);
+              alert(`管理者 ${res.data.user.userName} 您好`);
+
+              location.href = "/adminIndex.html";
+            } else if (res.data.user.role !== "admin") {
+              alert("您沒有造訪後台的權限");
+
+              return;
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+
+            if (
+              error.response.data === "Cannot find user" ||
+              error.response.data === "Email format is invalid"
+            ) {
+              alert("您的帳號尚未註冊");
+            } else if (
+              error.response.data === "Incorrect password" ||
+              error.response.data === "Password is too short"
+            ) {
+              alert("您的密碼錯誤");
+            }
+          });
+      }
+    </script>
+  </body>
+</html>

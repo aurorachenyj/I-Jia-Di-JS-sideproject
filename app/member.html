@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="no-referrer" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.ico.ico"
+      type="image/x-icon"
+    />
+    <title>愛呷甜 | 所有甜甜資訊一次給你</title>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <script
+      src="https://kit.fontawesome.com/794bb4a436.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <input type="checkbox" name="" class="burCheck" id="menuControl" />
+      <nav>
+        <a href="./index.html"
+          ><img src="./assets/images/iJiadi-logo.PNG" alt="愛呷甜LOGO"
+        /></a>
+        <label for="menuControl" class="menuBtn">
+          <span>選單</span>
+        </label>
+        <ul>
+          <li><a href="./popular.html">熱門排行榜</a></li>
+          <li><a href="./collection.html">收藏匣</a></li>
+          <li><a href="./member.html">會員專區</a></li>
+          <li>
+            <a href="./search-page.html"
+              >找甜甜 <i class="fa-solid fa-magnifying-glass fa-sm"></i
+            ></a>
+          </li>
+        </ul>
+        <button class="menuBarLoginBtn">
+          <a href="./login.html">登入<span> / 註冊</span></a>
+        </button>
+      </nav>
+    </header>
+    <!-- <div class="line"></div> -->
+
+    <!-- 內容區 -->
+    <div class="flex">
+      <!-- 修改個人資料 -->
+      <div class="memberwrap memberPageWrapStyle">
+        <div class="title"><h2>修改個人資料</h2></div>
+
+        <div class="memberEditArea">
+          <div class="upLoadPic">
+            <img src="./assets/images/fack-user-pic.png" alt="" />
+            <p>修改大頭貼</p>
+          </div>
+
+          <div class="memberEditItem">
+            <label for="userName">用戶名稱 </label
+            ><input
+              name="userName"
+              id="userName"
+              class="inputStyle"
+              type="text"
+            />
+            <label for="email">email帳號 </label
+            ><input name="email" id="email" class="inputStyle" type="text" />
+            <p style="display: none"><a href="">修改密碼</a></p>
+            <label for="password">修改密碼 </label
+            ><input
+              name="password"
+              id="password"
+              class="inputStyle"
+              type="text"
+              placeholder="請輸入新密碼"
+            />
+            <label for="checkPassword"
+              >確認新密碼
+              <span style="color: gray; font-size: 12px"
+                >密碼不相符</span
+              > </label
+            ><input
+              name="checkPassword"
+              id="checkPassword"
+              class="inputStyle"
+              type="text"
+              placeholder="請再次輸入新密碼"
+            />
+          </div>
+        </div>
+        <button class="btnStyle editBtn">送出修改</button>
+      </div>
+
+      <!-- 我發表的評價 -->
+      <div class="reviewWrap memberPageWrapStyle">
+        <h2>我發表的評價</h2>
+
+        <div class="itemGroup"></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="./assets/js/all.js"></script>
+    <script src="./assets/js/member.js"></script>
+  </body>
+</html>

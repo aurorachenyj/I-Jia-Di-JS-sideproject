@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.ico.ico"
+      type="image/x-icon"
+    />
+    <title>愛呷甜 | 所有甜甜資訊一次給你-搜尋頁面</title>
+    <link rel="stylesheet" href="./assets/style/reset.css" />
+    <!-- osm -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css"
+    />
+    <!-- osm -->
+
+    <link rel="stylesheet" href="./assets/style/osm.css" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <script
+      src="https://kit.fontawesome.com/794bb4a436.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <input type="checkbox" name="" class="burCheck" id="menuControl" />
+      <nav>
+        <a href="./index.html"
+          ><img src="./assets/images/iJiadi-logo.PNG" alt="愛呷甜LOGO"
+        /></a>
+        <label for="menuControl" class="menuBtn">
+          <span>選單</span>
+        </label>
+        <ul>
+          <li><a href="./popular.html">熱門排行榜</a></li>
+          <li><a href="./collection.html">收藏匣</a></li>
+          <li><a href="./member.html">會員專區</a></li>
+          <li>
+            <a class="menuBarSearch" href="#"
+              >找甜甜 <i class="fa-solid fa-magnifying-glass fa-sm"></i
+            ></a>
+          </li>
+        </ul>
+        <button class="menuBarLoginBtn">
+          <a href="./login.html">登入<span> / 註冊</span></a>
+        </button>
+      </nav>
+    </header>
+    <div class="searchBar removeAbsolute">
+      <div class="dropdown">
+        <div class="item text">
+          <label class="default">請選擇甜點</label>
+        </div>
+        <!--  -->
+        <div class="itemOption">
+          <div class="item">
+            <input id="sweetItem1" type="checkbox" value="肉桂捲" />
+            <label for="sweetItem1">肉桂捲</label>
+            <!-- <span>肉桂捲</span> -->
+          </div>
+          <div class="item">
+            <input id="sweetItem2" type="checkbox" value="巴斯克" />
+            <label for="sweetItem2">巴斯克</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem3" type="checkbox" value="生乳捲" />
+            <label for="sweetItem3">生乳捲</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem4" type="checkbox" value="可麗露" />
+            <label for="sweetItem4">可麗露</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem5" type="checkbox" value="千層" />
+            <label for="sweetItem5">千層</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem6" type="checkbox" value="戚風" />
+            <label for="sweetItem6">戚風</label>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem7" type="checkbox" value="乳酪蛋糕" />
+            <label for="sweetItem7">乳酪蛋糕</label>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem8" type="checkbox" value="布丁" />
+            <label for="sweetItem8">布丁</label>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem9" type="checkbox" value="鬆餅" />
+            <label for="sweetItem9">鬆餅</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem10" type="checkbox" value="泡芙" />
+            <label for="sweetItem10">泡芙</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem11" type="checkbox" value="水果塔" />
+            <label for="sweetItem11">水果塔</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem12" type="checkbox" value="檸檬塔" />
+            <label for="sweetItem12">檸檬塔</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem13" type="checkbox" value="鹹派" />
+            <label for="sweetItem13">鹹派</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem14" type="checkbox" value="司康" />
+            <label for="sweetItem14">司康</label>
+          </div>
+          <!--  -->
+          <div class="item">
+            <input id="sweetItem15" type="checkbox" value="磅蛋糕" />
+            <label for="sweetItem15">磅蛋糕</label>
+          </div>
+          <!--  -->
+          <div class="item">
+            <input id="sweetItem16" type="checkbox" value="甜甜圈" />
+            <label for="sweetItem16">甜甜圈</label>
+          </div>
+          <div class="item">
+            <input id="sweetItem17" type="checkbox" value="舒芙蕾" />
+            <label for="sweetItem17">舒芙蕾</label>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem18" type="checkbox" value="布朗尼" />
+            <label for="sweetItem18">布朗尼</label>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem19" type="checkbox" value="瑪德蓮" />
+            <label for="sweetItem19">瑪德蓮</label>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem20" type="checkbox" value="提拉米蘇" />
+            <label for="sweetItem20">提拉米蘇</label>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem21" type="checkbox" value="冰品" />
+            <label for="sweetItem21">冰品</label>
+          </div>
+
+          <p class="transparent">-----</p>
+        </div>
+        <!--  -->
+      </div>
+      <div class="mrtAndSearchArea">
+        <select class="mrt">
+          <option value="">選擇站點</option>
+          <option value="中山站">中山站</option>
+          <option value="雙連站">雙連站</option>
+          <option value="北門站">北門站</option>
+        </select>
+        <input class="searchShop" type="text" placeholder="  搜尋店家" />
+        <button class="searchBtn">搜尋</button>
+      </div>
+      <!--  -->
+    </div>
+
+    <div id="map" style="z-index: 0"></div>
+    <!-- <div class="searchWrap"> -->
+    <!-- 下面要內嵌地圖 外面好像不能再包一層 -->
+    <!-- <div id="map"></div> -->
+    <!-- <div style="display: hidden" class="searchMap">
+        <img style="display: hidden" src="" width="700" />
+      </div> -->
+    <div class="searchResultSort">
+      <p>變更排序</p>
+      <select class="searchSort sortStyle" name="" id="">
+        <option value="請選擇">請選擇</option>
+        <option value="評價最高">評價最高</option>
+        <option value="關聯度最高">關聯度最高</option>
+      </select>
+    </div>
+
+    <!-- 搜尋店家列表 -->
+    <div class="searchResultList">
+      <p style="text-align: center; color: gray">loading...</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+    <script src="./assets/js/all.js"></script>
+    <script src="./assets/js/search.js"></script>
+
+    <!-- <script src="./login.js"></script> -->
+    <script src="./assets/js/search-page.js"></script>
+  </body>
+</html>

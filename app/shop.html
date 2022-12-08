@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="no-referrer" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.ico.ico"
+      type="image/x-icon"
+    />
+    <title>愛呷甜 | 所有甜甜資訊一次給你</title>
+
+    <link rel="stylesheet" href="./assets/style/style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/794bb4a436.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <input type="checkbox" name="" class="burCheck" id="menuControl" />
+      <nav>
+        <a href="./index.html"
+          ><img src="./assets/images/iJiadi-logo.PNG" alt="愛呷甜LOGO"
+        /></a>
+        <label for="menuControl" class="menuBtn">
+          <span>選單</span>
+        </label>
+        <ul>
+          <li><a href="./popular.html">熱門排行榜</a></li>
+          <li><a href="./collection.html">收藏匣</a></li>
+          <li><a href="./member.html">會員專區</a></li>
+          <li>
+            <a class="menuBarSearch" href="./search-page.html"
+              >找甜甜 <i class="fa-solid fa-magnifying-glass fa-sm"></i
+            ></a>
+          </li>
+        </ul>
+        <button class="menuBarLoginBtn">
+          <a href="./login.html">登入<span> / 註冊</span></a>
+        </button>
+      </nav>
+    </header>
+
+    <div class="searchBar removeAbsolute">
+      <div class="dropdown">
+        <div class="item text">
+          <label class="default">請選擇甜點</label>
+        </div>
+        <!--  -->
+        <div class="itemOption">
+          <div class="item">
+            <input id="sweetItem1" type="checkbox" value="肉桂捲" />
+            <span>肉桂捲</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem2" type="checkbox" value="巴斯克" />
+            <span>巴斯克</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem3" type="checkbox" value="生乳捲" />
+            <span>生乳捲</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem4" type="checkbox" value="可麗露" />
+            <span>可麗露</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem5" type="checkbox" value="千層" />
+            <span>千層</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem6" type="checkbox" value="戚風" />
+            <span>戚風</span>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem7" type="checkbox" value="乳酪蛋糕" />
+            <span>乳酪蛋糕</span>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem8" type="checkbox" value="布丁" />
+            <span>布丁</span>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem9" type="checkbox" value="鬆餅" />
+            <span>鬆餅</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem10" type="checkbox" value="泡芙" />
+            <span>泡芙</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem11" type="checkbox" value="水果塔" />
+            <span>水果塔</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem12" type="checkbox" value="檸檬塔" />
+            <span>檸檬塔</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem13" type="checkbox" value="鹹派" />
+            <span>鹹派</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem14" type="checkbox" value="司康" />
+            <span>司康</span>
+          </div>
+          <!--  -->
+          <div class="item">
+            <input id="sweetItem15" type="checkbox" value="磅蛋糕" />
+            <span>磅蛋糕</span>
+          </div>
+          <!--  -->
+          <div class="item">
+            <input id="sweetItem16" type="checkbox" value="甜甜圈" />
+            <span>甜甜圈</span>
+          </div>
+          <div class="item">
+            <input id="sweetItem17" type="checkbox" value="舒芙蕾" />
+            <span>舒芙蕾</span>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem18" type="checkbox" value="布朗尼" />
+            <span>布朗尼</span>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem19" type="checkbox" value="瑪德蓮" />
+            <span>瑪德蓮</span>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem20" type="checkbox" value="提拉米蘇" />
+            <span>提拉米蘇</span>
+          </div>
+
+          <div class="item">
+            <input id="sweetItem21" type="checkbox" value="冰品" />
+            <span>冰品</span>
+          </div>
+        </div>
+        <!--  -->
+      </div>
+      <div class="mrtAndSearchArea">
+        <select class="mrt">
+          <option value="中山站">中山站</option>
+          <option value="雙連站">雙連站</option>
+          <option value="北門站">北門站</option>
+        </select>
+        <input class="searchShop" type="text" placeholder="  搜尋店家" />
+        <button class="searchBtn">搜尋</button>
+      </div>
+    </div>
+
+    <!-- 店家詳細資訊 -->
+    <div class="shopInfoOutWrap">
+      <div class="shopInfoWrap">
+        <div class="shopInfo">
+          <h3>Moshi Café 台北中山店 <span class="star">4.5 ★</span></h3>
+
+          <div class="tag">
+            <button class="tagButton">價位中等</button>
+            <button class="tagButton">回訪意願高</button>
+          </div>
+
+          <p class="shpoInfoText">
+            地址：台北市大同區赤峰街17巷18-1號1樓 <br />
+            營業時間：11:00 - 19:00 <br />
+            電話: 0225551259
+          </p>
+        </div>
+
+        <div class="btnAndMap">
+          <div class="buttonArea">
+            <!-- <button data-action="writeResume" class="buttonOutlineStyle">
+              撰寫評論</button
+            > -->
+            <button data-action="copyLink" class="buttonOutlineStyle">
+              複製連結</button
+            ><button data-action="saveStatus" class="buttonOutlineStyle">
+              收藏店家</button
+            ><button data-action="openMap" class="buttonOutlineStyle">
+              詳細地圖
+            </button>
+          </div>
+          <!-- <div class="searchMap">
+            <img src="./pic/fakeGoogleMap.PNG" width="700" />
+          </div> -->
+        </div>
+      </div>
+      <div class="shopImgArea">
+        <!-- <img class="imgStyle" src="./pic/store.png" alt="店家照片" />
+        <img class="imgStyle" src="./pic/store.png" alt="店家照片" />
+        <img class="imgStyle" src="./pic/store.png" alt="店家照片" /> -->
+      </div>
+      <div class="keyWordTag keyWordTagStyle">
+        <!-- <a class="keyWordTagStyle" href="">千層蛋糕</a
+        ><a class="keyWordTagStyle" href="">布丁</a> -->
+      </div>
+    </div>
+
+    <div class="addReview">
+      <h3 class="h3Style">發表評價</h3>
+      <div class="reviewWrap wrapStyle">
+        <div class="member">
+          <img class="userPic" src="./assets/images/user-default.png" alt="" />
+          <p class="userNameStatus"></p>
+        </div>
+        <div class="reviewContent">
+          <h4 class="h4Style">- 滿意度評分 -</h4>
+          <div class="reviewOption">
+            <div class="wrap">
+              <span>甜度</span>
+              <div class="starWrap sweetness">
+                <div class="star fa fa-star" data-sweetness="1"></div>
+                <div class="star fa fa-star" data-sweetness="2"></div>
+                <div class="star fa fa-star" data-sweetness="3"></div>
+                <div class="star fa fa-star" data-sweetness="4"></div>
+                <div class="star fa fa-star" data-sweetness="5"></div>
+              </div>
+            </div>
+
+            <div class="wrap">
+              <span>美觀度</span>
+              <div class="starWrap beauty">
+                <div class="star fa fa-star" data-beauty="1"></div>
+                <div class="star fa fa-star" data-beauty="2"></div>
+                <div class="star fa fa-star" data-beauty="3"></div>
+                <div class="star fa fa-star" data-beauty="4"></div>
+                <div class="star fa fa-star" data-beauty="5"></div>
+              </div>
+            </div>
+
+            <div class="wrap">
+              <span>實惠度</span>
+              <div class="starWrap price">
+                <div class="star fa fa-star" data-price="1"></div>
+                <div class="star fa fa-star" data-price="2"></div>
+                <div class="star fa fa-star" data-price="3"></div>
+                <div class="star fa fa-star" data-price="4"></div>
+                <div class="star fa fa-star" data-price="5"></div>
+              </div>
+            </div>
+
+            <div class="wrap">
+              <span>推薦指數</span>
+              <div class="starWrap recommend">
+                <div class="star fa fa-star" data-recommend="1"></div>
+                <div class="star fa fa-star" data-recommend="2"></div>
+                <div class="star fa fa-star" data-recommend="3"></div>
+                <div class="star fa fa-star" data-recommend="4"></div>
+                <div class="star fa fa-star" data-recommend="5"></div>
+              </div>
+            </div>
+
+            <div class="wrap">
+              <span>回訪意願</span>
+              <div class="starWrap return">
+                <div class="star fa fa-star" data-return="1"></div>
+                <div class="star fa fa-star" data-return="2"></div>
+                <div class="star fa fa-star" data-return="3"></div>
+                <div class="star fa fa-star" data-return="4"></div>
+                <div class="star fa fa-star" data-return="5"></div>
+              </div>
+            </div>
+
+            <div class="wrap">
+              <span>品項多寡</span>
+              <div class="starWrap variety">
+                <div class="star fa fa-star" data-variety="1"></div>
+                <div class="star fa fa-star" data-variety="2"></div>
+                <div class="star fa fa-star" data-variety="3"></div>
+                <div class="star fa fa-star" data-variety="4"></div>
+                <div class="star fa fa-star" data-variety="5"></div>
+              </div>
+            </div>
+          </div>
+          <h4 class="h4Style">- 文字評價 -</h4>
+          <textarea
+            class="reviewArea"
+            placeholder="發表用餐心得"
+            name=""
+            id=""
+          ></textarea>
+        </div>
+
+        <div class="postPic">
+          <img
+            class="previewPic"
+            src="./assets/images/fackReviewImg.png"
+            width="200px"
+            alt=""
+          />
+          <p>上傳照片</p>
+          <input class="uploadShopPic" type="file" id="uploadShopPic" />
+          <br />
+          <input class="SendReviewBtn" type="button" value="送出" />
+        </div>
+      </div>
+    </div>
+
+    <div class="otherReview">
+      <h3 class="h3Style">觀看其他評價 <span id="reviewNum">(共5則)</span></h3>
+      <!-- 評價1 -->
+      <div id="allReview">
+        <div class="otherReviewWrap wrapStyle">
+          <div class="otherMember">
+            <img src="./pic/fackUserPic.png" alt="" />
+            <p>會員B</p>
+          </div>
+          <div class="otherReviewContent">
+            <span class="scoreLabel">4.5 ★ </span>
+            <p>
+              <!-- <span class="scoreLabel">4.5 ★ </span> <br /> -->
+              文字評價在這裡文字評價在這裡文字評價在這裡文字評價在這裡文字評價在這裡文字評價在這裡文字評價在這裡文字評價在這裡文字評價在這裡
+              文字評價在這裡 文字評價在這裡 文字評價在這
+            </p>
+            <div class="tagArea">
+              <button class="tagButton">回訪意願高</button
+              ><button class="tagButton">螞蟻人最愛</button
+              ><button class="tagButton">品項選擇多</button>
+            </div>
+            <span class="gray">發布時間：2022-11-17 </span>
+          </div>
+
+          <img src="./pic/fackReviewImg.png" width="200px" alt="" srcset="" />
+        </div>
+
+        <div class="otherReviewWrap wrapStyle">
+          <div class="otherMember">
+            <img src="./pic/fackUserPic.png" alt="" />
+            <p>會員B</p>
+          </div>
+          <div class="otherReviewContent">
+            <p>
+              文字評價在這裡文字評價在這裡文字評價在這裡文字評價在這裡文字評價在這裡文字評價在這裡文字評價在這裡文字評價在這裡文字評價在這裡
+              文字評價在這裡 文字評價在這裡 文字評價在這
+            </p>
+            <div class="tagArea">
+              <button class="tagButton">回訪意願高</button
+              ><button class="tagButton">螞蟻人最愛</button
+              ><button class="tagButton">品項選擇多</button>
+            </div>
+          </div>
+
+          <img src="./pic/fackReviewImg.png" width="200px" alt="" srcset="" />
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="./assets/js/all.js"></script>
+    <script src="./assets/js/search.js"></script>
+    <script src="./assets/js/shop.js"></script>
+  </body>
+</html>
