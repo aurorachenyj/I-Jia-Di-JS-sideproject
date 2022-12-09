@@ -1,4 +1,4 @@
-const jsonUrl = "http://localhost:3000";
+const jsonUrl = "https://json-server-vercel-nine.vercel.app";
 const nav = document.querySelector("nav");
 //確認是否已登入
 const menuBarLoginBtn = document.querySelector(".menuBarLoginBtn");
