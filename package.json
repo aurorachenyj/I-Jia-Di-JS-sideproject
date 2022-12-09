@@ -1,0 +1,19 @@
+{
+  "name": "jsproject",
+  "version": "1.0.0",
+  "description": "愛呷甜 JS sideproject",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aurorachenyj/I-Jia-Di-JS-sideproject.git"
+  },
+  "author": "Aurora Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aurorachenyj/I-Jia-Di-JS-sideproject/issues"
+  },
+  "homepage": "https://github.com/aurorachenyj/I-Jia-Di-JS-sideproject#readme"
+}
