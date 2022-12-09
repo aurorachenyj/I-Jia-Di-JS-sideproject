@@ -102,7 +102,7 @@ function renderList(targetArea, data) {
   let str = "";
   data.forEach((item) => {
     str += ` <div class="swiper-slide">
-<a href="/app/shop.html?id=${item.id}">
+<a href="/IJiaDi-sideproject/app/shop.html?id=${item.id}">
   <img style="border-radius:30px;box-shadow: 3px 2px 3px rgba(0,0,0,0.5);" src="${item.picture[0]}" />
 </a>
 <p style="text-align: center">${item.shopName}</p>
