@@ -525,7 +525,7 @@ function getReviewData(e) {
   }
 
   if (uploadShopPicUrl == "") {
-    uploadShopPicUrl = "./pic/store.png";
+    uploadShopPicUrl = "./images/store.png";
   }
 
   console.log(uploadShopPicUrl);
