@@ -1,4 +1,4 @@
-// 搜尋頁面 顯示 //不知怎用QQ->地圖讓他先有個預設值(地圖才會一直顯示在上面)
+// 搜尋頁面 顯示
 console.log(localUserId);
 const Auth = `Bearer ${localStorage.getItem("accessToken")}`;
 axios.defaults.headers.common.Authorization = Auth;
@@ -246,7 +246,7 @@ function drawMap() {
         .bindPopup(
           `  <span style="color:gray" >${shop.MrtStation} </span><h2 style="font-size:1rem;font-weight:600;line-height:1.2rem;margin:.5rem 0 " > ${shop.shopName}  </h2>
 
-      <a style="text-decoration:none;padding:.3rem .5rem;background-color:#ffb330;border-radius:10px;color:white;margin:.5rem auto;display:block;text-align:center;"   href="/app/shop.html?id=${shop.shopId}">查看店家資訊</a>
+      <a style="text-decoration:none;padding:.3rem .5rem;background-color:#ffb330;border-radius:10px;color:white;margin:.5rem auto;display:block;text-align:center;"   href="/IJiaDi-sideproject/app/shop.html?id=${shop.shopId}">查看店家資訊</a>
       `
         )
         .openPopup()
@@ -389,7 +389,7 @@ function saveShop(targetShopId) {
         alert("憑證逾期，請重新登入");
         // 頁面導回登入頁 強制重新登入
         // tokenInvaild();
-        location.href = "/app/login.html";
+        location.href = "/IJiaDi-sideproject/app/login.html";
         localStorage.removeItem("accessToken");
         localStorage.removeItem("userName");
         localStorage.removeItem("userId");
