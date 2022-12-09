@@ -83,7 +83,7 @@ function signup(e) {
     userName: signupForm.userName.value.trim(),
     email: signupForm.email.value.trim(),
     password: signupForm.password.value.trim(),
-    InfoPic: `./pic/defaultUserPic/${randomNum}.png`,
+    InfoPic: `./assets/images/default-user-pic/${randomNum}.png`,
     role: "user",
   };
 
