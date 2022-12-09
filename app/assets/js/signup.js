@@ -100,8 +100,8 @@ function signup(e) {
         localStorage.setItem("accessToken", response.data.accessToken);
         localStorage.setItem("userId", response.data.user.id);
         alert("恭喜註冊成功！立即登入享受會員專屬功能～");
-        location.href = "/app/login.html";
-        //註冊成功後要讓使用者再次登入 (阿雅學姊是讓頁面跳轉到login的html， 目前是跳訊息並重整頁面 )
+        location.href = "/IJiaDi-sideproject/app/login.html";
+       
       }
     })
     .catch(function (error) {
