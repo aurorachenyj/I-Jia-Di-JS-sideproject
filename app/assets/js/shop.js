@@ -142,7 +142,6 @@ function buttonAction(e) {
     return;
   }
 
-  //撰寫評論先等等
   if (pressTarget === "openMap") {
     window.open(`https://www.google.com.tw/maps/search/${shopName}`);
   } else if (pressTarget === "copyLink") {

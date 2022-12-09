@@ -12,13 +12,6 @@ let shopName = url.searchParams.get("shopName");
 const searchSort = document.querySelector(".searchSort");
 
 console.log(searchSort);
-//處理token過期問題 這樣寫沒辦法動@@
-// function tokenInvaild() {
-//   location.href = "/login.html";
-//   localStorage.removeItem("accessToken");
-//   localStorage.removeItem("userName");
-//   localStorage.removeItem("userId");
-// }
 
 // 先判斷是否已登入 再看是否有收藏該店家
 // <i style="font-size:1.5rem; color:#e6a12c" class="fa-solid fa-heart"></i>
@@ -218,7 +211,7 @@ function drawMap() {
   // 25.0526898 121.5182023 中山站座標
   //定位座標
   let map = L.map("map", {
-    center: [25.0526898, 121.5182023], //定位點要改成變數
+    center: [25.0526898, 121.5182023],
     zoom: 16, //縮放程度
   });
 
