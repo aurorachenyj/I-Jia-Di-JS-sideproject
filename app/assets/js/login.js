@@ -51,6 +51,7 @@ Array.from(allLoginInput).forEach((input) => {
 // 按下登入按鈕
 loginBtn.addEventListener("click", login);
 function login(e) {
+  console.log(jsonUrl);
   e.preventDefault();
   console.log(loginForm.loginAccount.value);
   console.log(loginForm.loginPassword.value);
