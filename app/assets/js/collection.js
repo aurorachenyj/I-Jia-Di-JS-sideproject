@@ -31,7 +31,7 @@ function getBookmarkData() {
         alert("憑證逾期，請重新登入");
         // 頁面導回登入頁 強制重新登入
 
-        location.href = "/app/login.html";
+        location.href = "/IJiaDi-sideproject/app/login.html";
         localStorage.removeItem("accessToken");
         localStorage.removeItem("userName");
         localStorage.removeItem("userId");
@@ -42,9 +42,7 @@ function getBookmarkData() {
     });
 }
 
-{
-  /* <a href="./shop.html?id=${item.id} ></a> */
-}
+
 
 function renderBookmarkList() {
   console.log(bookmarkData);
@@ -63,7 +61,7 @@ function renderBookmarkList() {
   
 
   <button class="readMoreBtn">
-  <a href="./shop.html?id=${item.id}"> <span class="noShow" style="color:white" > More</span> ></a>
+  <a href="./IJiaDi-sideproject/app/shop.html?id=${item.id}"> <span class="noShow" style="color:white" > More</span> ></a>
   </button>
 </div>
 </div> `;
