@@ -61,7 +61,7 @@ function renderBookmarkList() {
   
 
   <button class="readMoreBtn">
-  <a href="./IJiaDi-sideproject/app/shop.html?id=${item.id}"> <span class="noShow" style="color:white" > More</span> ></a>
+  <a href="./shop.html?id=${item.id}"> <span class="noShow" style="color:white" > More</span> ></a>
   </button>
 </div>
 </div> `;
