@@ -82,7 +82,7 @@ function login(e) {
 
         alert(`${response.data.user.userName} 您好，恭喜登入成功！`);
         localLoginChecker();
-        location.href = "/app/index.html";
+        location.href = "/IJiaDi-sideproject/app/index.html";
       }
     })
     .catch(function (error) {
