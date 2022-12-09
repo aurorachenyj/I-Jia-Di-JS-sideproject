@@ -52,7 +52,7 @@ function nonMember() {
     console.log(e.target.textContent);
     if (e.target.textContent === "找甜甜 ") {
       e.preventDefault();
-      location.href = `/app/search-page.html?sweetItem=巴斯克&station=undefined&shopName=`;
+      location.href = `/IJiaDi-sideproject/app/search-page.html?sweetItem=巴斯克&station=undefined&shopName=`;
     }
 
     if (
