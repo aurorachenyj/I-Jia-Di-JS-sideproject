@@ -1,2 +1,2 @@
-# I-Jia-Di-JS-sideproject
+IJiaDi-sideproject
 愛呷甜 JS sideproject
