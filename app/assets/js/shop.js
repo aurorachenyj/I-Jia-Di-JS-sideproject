@@ -578,5 +578,5 @@ function clearOldResume() {
   renderStar("recommend", 0);
   renderStar("return", 0);
   renderStar("variety", 0);
-  previewPic.src = "./pic/fackReviewImg.png";
+  previewPic.src = "./assets/images/fackReviewImg.png";
 }
