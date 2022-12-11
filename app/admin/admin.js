@@ -25,7 +25,7 @@ let shopChartArr = [];
 // 按下登出按鈕
 adminLogoutBtn.addEventListener("click", (e) => {
   alert("成功登出後台");
-  location.href = "/IJiaDi-sideproject/app/admin/admin-login.html";
+  location.href = "/admin-login.html";
 });
 
 //下方資料顯示
