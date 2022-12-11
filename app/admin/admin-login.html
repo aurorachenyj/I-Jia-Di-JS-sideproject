@@ -51,7 +51,7 @@
               localStorage.setItem("adminName", res.data.user.userName);
               alert(`管理者 ${res.data.user.userName} 您好`);
 
-              location.href = "/admin-login.html";
+              location.href = "/IJiaDi-sideproject/app/admin/admin-login.html";
             } else if (res.data.user.role !== "admin") {
               alert("您沒有造訪後台的權限");
 
