@@ -38,7 +38,7 @@ function getBookmark() {
     })
     .catch(function (error) {
       console.log(error);
-      if (error.request.statusText == "Unauthorized") {
+      if (error.response.data === "jwt expired") {
         alert("憑證逾期，請重新登入");
         // 頁面導回登入頁 強制重新登入
 
@@ -385,7 +385,7 @@ function saveShop(targetShopId) {
     })
     .catch(function (error) {
       console.log(error);
-      if (error.request.statusText == "Unauthorized") {
+      if (error.response.data === "jwt expired") {
         alert("憑證逾期，請重新登入");
         // 頁面導回登入頁 強制重新登入
         // tokenInvaild();
