@@ -168,7 +168,7 @@ function editContent(e) {
     .catch(function (error) {
       console.log(error);
 
-      if (error?.request?.statusText == "Unauthorized") {
+      if (error.response.data === "jwt expired") {
         alert("請重新登入");
         // 頁面導回登入頁 強制重新登入
         location.href = "/app/login.html";
@@ -245,7 +245,7 @@ function memberResumeListRender() {
       if (error.message === "Request failed with status code 403") {
         itemGroup.innerHTML = `<p style="color:gray;text-align:center;">您尚未留下評價</p>`;
       }
-      if (error.request.statusText == "Unauthorized") {
+      if (error.response.data === "jwt expired") {
         alert("請重新登入");
         // 頁面導回登入頁 強制重新登入
         location.href = "/app/login.html";
