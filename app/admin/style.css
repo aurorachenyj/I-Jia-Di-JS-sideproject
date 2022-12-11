@@ -10,8 +10,11 @@ h2 {
 }
 
 nav {
-  background-color: burlywood;
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
   height: 7vh;
   margin-bottom: 5rem;
 }
@@ -45,15 +48,15 @@ input {
 
 h1,
 .header span {
-  color: rgb(255, 255, 255);
+  color: #faca45;
 }
 
 .adminLogoutBtn {
   margin-left: 0.5rem;
   padding: 0.2rem;
-  border: 1px solid rgb(128, 31, 31);
+  border: 1px solid rgb(245, 167, 24);
   border-radius: 10px;
-  background-color: rgb(153, 127, 9);
+  background-color: #faca45;
   color: white;
 }
 
@@ -91,14 +94,12 @@ h1,
 .showData tr {
   display: flex;
   justify-content: space-around;
-  background-color: rgb(255, 248, 226);
+  background-color: rgb(255, 255, 255);
   padding: 0.5rem 0;
   margin: 1px 0;
 }
 
 .showData td {
-  /* background-color: pink; */
-  /* border: 2px solid gray; */
   text-align: center;
 }
 
