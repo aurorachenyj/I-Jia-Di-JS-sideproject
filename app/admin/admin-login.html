@@ -17,13 +17,13 @@
       <p>帳號</p>
       <input id="adminAccount" type="text" /> <br />
       <p>密碼</p>
-      <input id="adminPassword" type="text" /> <br />
+      <input id="adminPassword" type="password" /> <br />
 
       <button class="loginbtn">登入</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script>
-      const jsonUrl = "http://localhost:3000";
+      const jsonUrl = "https://json-server-vercel-nine.vercel.app";
       const adminAccount = document.querySelector("#adminAccount");
       const adminPassword = document.querySelector("#adminPassword");
       const loginbtn = document.querySelector(".loginbtn");
