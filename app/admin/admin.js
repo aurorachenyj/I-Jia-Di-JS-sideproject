@@ -1,4 +1,4 @@
-const jsonUrl = "http://localhost:3000";
+const jsonUrl = "https://json-server-vercel-nine.vercel.app";
 
 const userTitle = document.querySelector(".userTitle");
 const resumeTitle = document.querySelector(".resumeTitle");
