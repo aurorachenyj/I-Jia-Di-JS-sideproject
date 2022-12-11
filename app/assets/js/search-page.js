@@ -354,7 +354,7 @@ function changeSaveStatus(e) {
   const targetbookmarkId = e.target.getAttribute("data-bookmarkId");
   if (vol === "fa-solid fa-heart") {
     // console.log("取消收藏");
-    // console.log(targetShopId);
+   
     unSaveShop(targetbookmarkId);
     e.target.setAttribute("class", "fa-regular fa-heart");
   } else if (vol === "fa-regular fa-heart") {
@@ -388,7 +388,7 @@ function saveShop(targetShopId) {
       if (error.response.data === "jwt expired") {
         alert("憑證逾期，請重新登入");
         // 頁面導回登入頁 強制重新登入
-        // tokenInvaild();
+      
         location.href = "/IJiaDi-sideproject/app/login.html";
         localStorage.removeItem("accessToken");
         localStorage.removeItem("userName");
@@ -412,6 +412,6 @@ function unSaveShop(targetbookmarkId) {
     })
     .catch(function (error) {
       console.log(error);
-      tokenInvaild();
+     
     });
 }
