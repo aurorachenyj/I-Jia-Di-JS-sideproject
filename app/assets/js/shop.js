@@ -100,7 +100,7 @@ function bookmark() {
     })
     .catch(function (error) {
       console.log(error);
-      if (error.request.statusText == "Unauthorized") {
+      if (error.response.data === "jwt expired") {
         alert("憑證逾期，請重新登入");
         // 頁面導回登入頁 強制重新登入
 
@@ -196,7 +196,7 @@ function saveShop(targetShopId) {
     })
     .catch(function (error) {
       console.log(error);
-      if (error.request.statusText == "Unauthorized") {
+      if (error.response.data === "jwt expired") {
         alert("憑證逾期，請重新登入");
 
         location.href = "/app/login.html";
@@ -224,7 +224,7 @@ function unSaveShop(targetbookmarkId) {
     })
     .catch(function (error) {
       console.log(error);
-      if (error.request.statusText == "Unauthorized") {
+      if (error.response.data === "jwt expired") {
         alert("憑證逾期，請重新登入");
         // 頁面導回登入頁 強制重新登入
 
@@ -556,7 +556,7 @@ function getReviewData(e) {
     })
     .catch(function (error) {
       console.log(error);
-      if (error.request.statusText == "Unauthorized") {
+      if (error.response.data === "jwt expired") {
         alert("請重新登入後再進行評價");
         // 頁面導回登入頁 強制重新登入
         location.href = "/app/login.html";
