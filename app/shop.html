@@ -11,7 +11,10 @@
       type="image/x-icon"
     />
     <title>愛呷甜 | 所有甜甜資訊一次給你</title>
-
+   <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    />
     <link rel="stylesheet" href="./assets/style/style.css" />
 
     <script
@@ -187,8 +190,10 @@
               詳細地圖
             </button>
           </div>
+           <div id="searchMap"></div>
         </div>
       </div>
+      
       <div class="shopImgArea"></div>
       <div class="keyWordTag keyWordTagStyle"></div>
     </div>
@@ -299,6 +304,7 @@
       <div id="allReview"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+      <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="./assets/js/all.js"></script>
     <script src="./assets/js/search.js"></script>
     <script src="./assets/js/shop.js"></script>
