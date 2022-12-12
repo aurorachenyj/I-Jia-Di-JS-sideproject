@@ -94,16 +94,11 @@ function innerMap() {
     shadowSize: [41, 41],
   });
 
-  L.marker([25.0509278, 121.5173372], { icon: goldIcon })
+  L.marker([shopData.lat, shopData.lng], { icon: goldIcon })
     .addTo(shopMap)
     .bindPopup(`<h3>${shopData.shopName}</h3>`)
     .openPopup();
 }
-
-
-
-
-
 
 //渲染收藏按鈕狀態
 function bookmark() {
