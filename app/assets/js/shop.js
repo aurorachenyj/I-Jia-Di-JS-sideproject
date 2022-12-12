@@ -69,6 +69,41 @@ function renderShopData() {
   getOtherReview();
 }
 
+// 店家地圖
+function innerMap() {
+  console.log(shopData);
+  let shopMap = L.map("searchMap", {
+    center: [shopData.lat, shopData.lng],
+    zoom: 14, //縮放程度
+  });
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(shopMap);
+
+  let goldIcon = new L.Icon({
+    iconUrl:
+      "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png",
+    shadowUrl:
+      "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41],
+  });
+
+  L.marker([25.0509278, 121.5173372], { icon: goldIcon })
+    .addTo(shopMap)
+    .bindPopup(`<h3>${shopData.shopName}</h3>`)
+    .openPopup();
+}
+
+
+
+
+
+
 //渲染收藏按鈕狀態
 function bookmark() {
   if (!localUserId) {
