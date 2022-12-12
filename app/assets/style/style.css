@@ -529,8 +529,14 @@ footer p {
 .shopInfoOutWrap .shopInfoWrap .btnAndMap {
   text-align: right;
 }
-.shopInfoOutWrap .shopInfoWrap .btnAndMap .searchMap {
+.shopInfoOutWrap .shopInfoWrap .btnAndMap #searchMap {
   width: 30vw;
+  height: 20vw;
+  padding: 0.5rem;
+  border-radius: 30px;
+  margin: 1rem 0;
+  box-shadow: 3px 3px 5px #7e7e7e;
+  z-index: 1;
 }
 .shopInfoOutWrap .shopImgArea {
   max-width: 70vw;
@@ -948,9 +954,14 @@ footer p {
     width: 90vw;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .shopInfoOutWrap .shopInfoWrap .btnAndMap {
     text-align: left;
+  }
+  .shopInfoOutWrap .shopInfoWrap .btnAndMap #searchMap {
+    width: 50vw;
+    height: 30vw;
   }
   .shopInfoOutWrap .shopImgArea {
     width: 40vw;
@@ -1018,5 +1029,9 @@ footer p {
   }
   .signup .signupcontent {
     flex-direction: column-reverse;
+  }
+  .shopInfoOutWrap .shopInfoWrap .btnAndMap #searchMap {
+    width: 80vw;
+    height: 40vw;
   }
 }/*# sourceMappingURL=style.css.map */
