@@ -140,7 +140,7 @@ function bookmark() {
         alert("憑證逾期，請重新登入");
         // 頁面導回登入頁 強制重新登入
 
-        location.href = "/app/login.html";
+        location.href = "/IJiaDi-sideproject/app/login.html";
         localStorage.removeItem("accessToken");
         localStorage.removeItem("userName");
         localStorage.removeItem("userId");
@@ -235,7 +235,7 @@ function saveShop(targetShopId) {
       if (error.response.data === "jwt expired") {
         alert("憑證逾期，請重新登入");
 
-        location.href = "/app/login.html";
+        location.href = "/IJiaDi-sideproject/app/login.html";
         localStorage.removeItem("accessToken");
         localStorage.removeItem("userName");
         localStorage.removeItem("userId");
@@ -264,7 +264,7 @@ function unSaveShop(targetbookmarkId) {
         alert("憑證逾期，請重新登入");
         // 頁面導回登入頁 強制重新登入
 
-        location.href = "/app/login.html";
+        location.href = "/IJiaDi-sideproject/app/login.html";
         localStorage.removeItem("accessToken");
         localStorage.removeItem("userName");
         localStorage.removeItem("userId");
@@ -595,7 +595,7 @@ function getReviewData(e) {
       if (error.response.data === "jwt expired") {
         alert("請重新登入後再進行評價");
         // 頁面導回登入頁 強制重新登入
-        location.href = "/app/login.html";
+        location.href = "/IJiaDi-sideproject/app/login.html";
         localStorage.removeItem("accessToken");
         localStorage.removeItem("userName");
         localStorage.removeItem("userId");
