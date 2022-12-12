@@ -30,7 +30,8 @@ function getShopData() {
 }
 
 function renderShopData() {
-  console.log(shopData);
+  //console.log(shopData);
+  innerMap();
   localStorage.setItem("shopName", shopData.shopName);
 
   const shopInfo = document.querySelector(".shopInfo");
