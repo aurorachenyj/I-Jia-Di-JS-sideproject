@@ -42,7 +42,7 @@ function getBookmark() {
         alert("憑證逾期，請重新登入");
         // 頁面導回登入頁 強制重新登入
 
-        location.href = "/app/login.html";
+        location.href = "/IJiaDi-sideproject/app/login.html";
         localStorage.removeItem("accessToken");
         localStorage.removeItem("userName");
         localStorage.removeItem("userId");
