@@ -1,7 +1,13 @@
-愛呷甜 JS sideproject
+愛呷甜 JS sideproject 
 
-前台 DEMO 
+前台 DEMO  
 https://aurorachenyj.github.io/IJiaDi-sideproject/app/index.html
+
+※使用說明： <br>
+歡迎註冊帳號體驗會員功能，或使用下方帳密登入 <br>
+帳號: johnwang@test.com  <br>
+密碼: 1234  <br>
+若登入帳號但畫面無反應，請聯繫我（需重新喚醒主機 )  <br>
 
 後台 DEMO
 https://aurorachenyj.github.io/IJiaDi-sideproject/app/admin/admin-login.html
