@@ -1010,7 +1010,10 @@ footer p {
     margin-bottom: 1rem;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 414px) {  
+  .h1style {
+    font-size: 1.5rem;
+  }
   header nav .menuBtn::before {
     content: "";
     left: 1rem;
