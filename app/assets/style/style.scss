@@ -1356,8 +1356,10 @@ footer {
 }
 
 @media (max-width: 414px) {
-  //banner的字體用小一點
-
+ .h1style {
+    font-size: 1.5rem;
+  }
+  
   header {
     nav {
       .menuBtn {
